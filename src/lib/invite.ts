@@ -20,8 +20,8 @@ export const invite = {
   openButton: "Open invitation",
 
   // Africa/Lagos is UTC+1 all year (no daylight saving).
-  startsAt: "2026-11-07T12:00:00+01:00",
-  endsAt: "2026-11-07T18:00:00+01:00",
+  startsAt: "2026-11-07T18:00:00+01:00",
+  endsAt: "2026-11-07T22:00:00+01:00",
 
   countdownTitle: "COUNTDOWN",
 
