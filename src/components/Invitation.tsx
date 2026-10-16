@@ -8,7 +8,7 @@ import { Countdown } from "./Countdown";
 import { FloatingNav, type NavSection } from "./FloatingNav";
 import { Gallery } from "./Gallery";
 import { HeroSlideshow } from "./HeroSlideshow";
-import { MusicPlayer } from "./MusicPlayer";
+import { MusicPlayer, type MusicHandle } from "./MusicPlayer";
 import { Reveal } from "./Reveal";
 import { Rsvp } from "./Rsvp";
 import { SaveInvite } from "./SaveInvite";
@@ -61,7 +61,7 @@ export function Invitation({
   const [showMap, setShowMap] = useState(false);
   const [musicPlaying, setMusicPlaying] = useState(false);
   const [musicVolume, setMusicVolume] = useState(0.6);
-  const musicRef = useRef<HTMLAudioElement>(null);
+  const musicRef = useRef<MusicHandle>(null);
 
   useEffect(() => {
     document.body.style.overflow = gateGone ? "" : "hidden";
@@ -69,24 +69,18 @@ export function Invitation({
 
   function open() {
     setOpened(true);
-    const el = musicRef.current;
-    if (el) {
-      el.volume = musicVolume;
-      el.play().catch(() => {});
-    }
+    // Must run in the same tap as "Open invitation" so iOS unlocks audio + volume.
+    musicRef.current?.unlockAndPlay();
     setTimeout(() => setGateGone(true), 700);
   }
 
   function toggleMusic() {
-    const el = musicRef.current;
-    if (!el) return;
-    if (el.paused) el.play().catch(() => {});
-    else el.pause();
+    musicRef.current?.toggle();
   }
 
   function changeVolume(value: number) {
     setMusicVolume(value);
-    if (musicRef.current) musicRef.current.volume = value;
+    musicRef.current?.setVolume(value);
   }
 
   const hasNote = Boolean(guest?.message);
@@ -110,9 +104,9 @@ export function Invitation({
     <main className="relative min-h-dvh overflow-x-hidden">
       {invite.music && (
         <MusicPlayer
+          ref={musicRef}
           src={invite.music}
-          start={opened}
-          audioRef={musicRef}
+          volume={musicVolume}
           onPlayingChange={setMusicPlaying}
         />
       )}

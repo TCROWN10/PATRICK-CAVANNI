@@ -31,6 +31,26 @@ export function FloatingNav({
   const [atEnd, setAtEnd] = useState(false);
   const [active, setActive] = useState<string | null>(null);
   const rootRef = useRef<HTMLDivElement>(null);
+  const volumeIdleRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const VOLUME_IDLE_MS = 2800;
+
+  function clearVolumeIdle() {
+    if (volumeIdleRef.current) {
+      clearTimeout(volumeIdleRef.current);
+      volumeIdleRef.current = null;
+    }
+  }
+
+  function bumpVolumeIdle() {
+    clearVolumeIdle();
+    volumeIdleRef.current = setTimeout(() => setVolumeOpen(false), VOLUME_IDLE_MS);
+  }
+
+  function showVolume() {
+    setVolumeOpen(true);
+    bumpVolumeIdle();
+  }
 
   useEffect(() => {
     const onScroll = () => {
@@ -58,12 +78,14 @@ export function FloatingNav({
       if (!rootRef.current?.contains(e.target as Node)) {
         setOpen(false);
         setVolumeOpen(false);
+        clearVolumeIdle();
       }
     };
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setOpen(false);
         setVolumeOpen(false);
+        clearVolumeIdle();
       }
     };
     document.addEventListener("pointerdown", onPointer);
@@ -73,6 +95,8 @@ export function FloatingNav({
       document.removeEventListener("keydown", onKey);
     };
   }, [open, volumeOpen]);
+
+  useEffect(() => () => clearVolumeIdle(), []);
 
   function scrollToTop(el: HTMLElement) {
     window.scrollTo({ top: window.scrollY + el.getBoundingClientRect().top - 24, behavior: "smooth" });
@@ -104,14 +128,32 @@ export function FloatingNav({
                 ? "w-32 px-3 opacity-100 sm:w-36"
                 : "pointer-events-none w-0 px-0 opacity-0"
             }`}
+            onPointerDown={(e) => e.stopPropagation()}
           >
             <input
               type="range"
               min={0}
               max={1}
-              step={0.05}
+              step={0.01}
               value={music.volume}
-              onChange={(e) => music.onVolume(Number(e.target.value))}
+              onPointerDown={(e) => {
+                e.stopPropagation();
+                clearVolumeIdle();
+              }}
+              onPointerUp={bumpVolumeIdle}
+              onTouchStart={(e) => {
+                e.stopPropagation();
+                clearVolumeIdle();
+              }}
+              onTouchEnd={bumpVolumeIdle}
+              onInput={(e) => {
+                music.onVolume(Number((e.target as HTMLInputElement).value));
+                bumpVolumeIdle();
+              }}
+              onChange={(e) => {
+                music.onVolume(Number(e.target.value));
+                bumpVolumeIdle();
+              }}
               aria-label="Volume"
               tabIndex={volumeOpen ? 0 : -1}
               className="h-1.5 w-full cursor-pointer accent-accent"
@@ -121,10 +163,11 @@ export function FloatingNav({
             type="button"
             onClick={() => {
               if (!volumeOpen) {
-                setVolumeOpen(true);
+                showVolume();
                 return;
               }
               music.onToggle();
+              bumpVolumeIdle();
             }}
             aria-label={
               !volumeOpen
