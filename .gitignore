@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -39,3 +40,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Unused source audio (app uses /invite/unstoppable.mp3)
+/public/Sia - Unstoppable (Official Audio).mp3
+/public/Rosa_Linn_-_Snap_(mp3.pm).mp3
+/public/invite/snap.mp3
