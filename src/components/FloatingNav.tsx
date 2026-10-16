@@ -27,6 +27,7 @@ export function FloatingNav({
   };
 }) {
   const [open, setOpen] = useState(false);
+  const [volumeOpen, setVolumeOpen] = useState(false);
   const [atEnd, setAtEnd] = useState(false);
   const [active, setActive] = useState<string | null>(null);
   const rootRef = useRef<HTMLDivElement>(null);
@@ -52,12 +53,18 @@ export function FloatingNav({
   }, [sections]);
 
   useEffect(() => {
-    if (!open) return;
+    if (!open && !volumeOpen) return;
     const onPointer = (e: PointerEvent) => {
-      if (!rootRef.current?.contains(e.target as Node)) setOpen(false);
+      if (!rootRef.current?.contains(e.target as Node)) {
+        setOpen(false);
+        setVolumeOpen(false);
+      }
     };
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Escape") {
+        setOpen(false);
+        setVolumeOpen(false);
+      }
     };
     document.addEventListener("pointerdown", onPointer);
     document.addEventListener("keydown", onKey);
@@ -65,7 +72,7 @@ export function FloatingNav({
       document.removeEventListener("pointerdown", onPointer);
       document.removeEventListener("keydown", onKey);
     };
-  }, [open]);
+  }, [open, volumeOpen]);
 
   function scrollToTop(el: HTMLElement) {
     window.scrollTo({ top: window.scrollY + el.getBoundingClientRect().top - 24, behavior: "smooth" });
@@ -91,7 +98,13 @@ export function FloatingNav({
     >
       {music && (
         <div className="relative flex items-center">
-          <div className="absolute right-full mr-2 flex h-11 w-32 items-center rounded-full bg-white/85 px-3 shadow-lg ring-1 ring-black/5 backdrop-blur-md sm:w-36">
+          <div
+            className={`absolute right-full mr-2 flex h-11 items-center overflow-hidden rounded-full bg-white/85 shadow-lg ring-1 ring-black/5 backdrop-blur-md transition-all duration-300 ${
+              volumeOpen
+                ? "w-32 px-3 opacity-100 sm:w-36"
+                : "pointer-events-none w-0 px-0 opacity-0"
+            }`}
+          >
             <input
               type="range"
               min={0}
@@ -100,13 +113,27 @@ export function FloatingNav({
               value={music.volume}
               onChange={(e) => music.onVolume(Number(e.target.value))}
               aria-label="Volume"
+              tabIndex={volumeOpen ? 0 : -1}
               className="h-1.5 w-full cursor-pointer accent-accent"
             />
           </div>
           <button
             type="button"
-            onClick={music.onToggle}
-            aria-label={music.playing ? "Mute music" : "Unmute music"}
+            onClick={() => {
+              if (!volumeOpen) {
+                setVolumeOpen(true);
+                return;
+              }
+              music.onToggle();
+            }}
+            aria-label={
+              !volumeOpen
+                ? "Open volume"
+                : music.playing
+                  ? "Mute music"
+                  : "Unmute music"
+            }
+            aria-expanded={volumeOpen}
             className={`relative ${fab} ${idle}`}
           >
             {music.playing && (
