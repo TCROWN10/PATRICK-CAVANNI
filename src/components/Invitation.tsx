@@ -322,18 +322,6 @@ export function Invitation({
           </section>
         </Reveal>
 
-        <Reveal>
-          <footer className="mx-auto max-w-2xl border-t border-accent-soft/40 px-4 pb-16 pt-10 text-center">
-            <p className="section-title mb-6 text-xs uppercase tracking-[0.35em] text-accent">The Vision</p>
-            <BrandLogo className="mx-auto mb-6 h-32 w-auto md:h-36" />
-            <p className="section-title text-lg italic leading-relaxed tracking-normal text-ink/80 md:text-xl">
-              {invite.vision}
-            </p>
-            <p className="section-title mt-6 text-[11px] uppercase tracking-[0.2em] text-ink/50 sm:text-xs">
-              {invite.signoff}
-            </p>
-          </footer>
-        </Reveal>
       </div>
     </main>
   );
