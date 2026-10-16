@@ -6,7 +6,6 @@ import { invite } from "@/lib/invite";
 import { AddToCalendar } from "./AddToCalendar";
 import { Countdown } from "./Countdown";
 import { FloatingNav, type NavSection } from "./FloatingNav";
-import { Gallery } from "./Gallery";
 import { HeroSlideshow } from "./HeroSlideshow";
 import { MusicPlayer, type MusicHandle } from "./MusicPlayer";
 import { Reveal } from "./Reveal";
@@ -15,18 +14,14 @@ import { SaveInvite } from "./SaveInvite";
 import { ScrollProgress } from "./ScrollProgress";
 import { Sparkles } from "./Sparkles";
 import {
+  BookIcon,
   CalendarIcon,
   ClockIcon,
-  CraneIcon,
   ExternalIcon,
   HeartIcon,
-  HomeIcon,
-  LinesIcon,
   MailCheckIcon,
   MapIcon,
-  PhotosIcon,
   PinIcon,
-  ShirtIcon,
   TicketIcon,
 } from "./icons";
 
@@ -87,13 +82,9 @@ export function Invitation({
   const sections = useMemo<NavSection[]>(
     () => [
       ...(hasNote ? [{ id: "note", label: "A note for you", icon: <HeartIcon /> }] : []),
-      { id: "house", label: "The House", icon: <HomeIcon /> },
-      { id: "tethered-lines", label: invite.tetheredLines.title, icon: <LinesIcon /> },
-      { id: "crane", label: invite.crownedCrane.title, icon: <CraneIcon /> },
-      ...(invite.gallery.length ? [{ id: "gallery", label: "Gallery", icon: <PhotosIcon /> }] : []),
+      { id: "story", label: "The Invitation", icon: <BookIcon /> },
       { id: "date", label: "Date and Time", icon: <CalendarIcon /> },
       { id: "location", label: "Location", icon: <PinIcon /> },
-      { id: "dresscode", label: "Dress Code", icon: <ShirtIcon /> },
       { id: "rsvp", label: "Confirm Your Attendance", icon: <MailCheckIcon /> },
       { id: "save", label: "Save your invitation", icon: <TicketIcon /> },
     ],
@@ -199,89 +190,60 @@ export function Invitation({
         )}
 
         <Reveal>
-          <section id="house" className="card scroll-mt-10 px-5 py-8 text-center md:px-12 md:py-12">
+          <section id="story" className="card scroll-mt-10 px-5 py-8 text-center md:px-12 md:py-12">
             <h2 className="section-title mb-5 text-xl font-bold md:text-2xl">{invite.house.title}</h2>
             <div className="section-title mx-auto max-w-2xl space-y-4 text-lg italic leading-relaxed tracking-normal md:text-xl">
               {invite.house.body.map((p) => (
                 <p key={p}>{p}</p>
               ))}
             </div>
+
             <GoldRule />
+
             <h3 className="section-title text-base font-bold uppercase tracking-[0.12em] text-accent md:text-lg">
               {invite.house.chapterTitle}
             </h3>
             <p className="section-title mx-auto mt-3 max-w-2xl text-base italic leading-relaxed tracking-normal text-ink/80 md:text-lg">
               {invite.house.chapter}
             </p>
-          </section>
-        </Reveal>
 
-        <Reveal>
-          <Card
-            id="tethered-lines"
-            title={invite.tetheredLines.title}
-            subtitle={invite.tetheredLines.subtitle}
-            icon={<LinesIcon />}
-          >
-            <div className="grid items-center gap-6 md:grid-cols-[1fr_auto] md:gap-10">
-              <div className="section-title space-y-4 text-lg italic leading-relaxed tracking-normal md:text-xl">
-                {invite.tetheredLines.body.map((p) => (
-                  <p key={p}>{p}</p>
-                ))}
-              </div>
-              <figure className="group relative mx-auto w-full max-w-sm overflow-hidden rounded-2xl ring-1 ring-accent-soft/60 shadow-[0_18px_40px_-18px_rgba(123,30,58,0.55)] md:w-56 lg:w-64">
-                <Image
-                  src={invite.tetheredLines.image.src}
-                  alt={invite.tetheredLines.image.alt}
-                  width={invite.tetheredLines.image.width}
-                  height={invite.tetheredLines.image.height}
-                  sizes="(min-width: 1024px) 256px, (min-width: 768px) 224px, 384px"
-                  className="aspect-[4/5] w-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105 md:aspect-[3/4]"
-                />
-                <div className="pointer-events-none absolute inset-2 rounded-xl border border-white/40" />
-              </figure>
+            <GoldRule />
+
+            <p className="section-title text-xs uppercase tracking-[0.28em] text-accent-soft">
+              {invite.tetheredLines.subtitle}
+            </p>
+            <h3 className="section-title mt-2 text-xl font-bold md:text-2xl">{invite.tetheredLines.title}</h3>
+            <div className="section-title mx-auto mt-4 max-w-2xl space-y-4 text-lg italic leading-relaxed tracking-normal md:text-xl">
+              {invite.tetheredLines.body.map((p) => (
+                <p key={p}>{p}</p>
+              ))}
             </div>
             <Quote>{invite.tetheredLines.quote}</Quote>
-          </Card>
-        </Reveal>
 
-        <Reveal>
-          <Card
-            id="crane"
-            title={invite.crownedCrane.title}
-            subtitle={invite.crownedCrane.subtitle}
-            icon={
-              <Image src={invite.crane.src} alt="" width={invite.crane.width} height={invite.crane.height} sizes="16px" className="h-7 w-auto brightness-0 invert" />
-            }
-          >
-            <div className="grid items-center gap-6 md:grid-cols-[auto_1fr] md:gap-10">
-              <div className="mx-auto flex h-48 w-40 items-center justify-center rounded-2xl bg-[radial-gradient(ellipse_at_center,#4a1426_0%,#1c070e_70%,#000_100%)] p-4 shadow-inner md:h-64 md:w-48">
-                <Image
-                  src={invite.crane.src}
-                  alt="The Patrick Cavanni crowned crane emblem"
-                  width={invite.crane.width}
-                  height={invite.crane.height}
-                  sizes="96px"
-                  className="h-full w-auto"
-                />
-              </div>
-              <div className="section-title space-y-4 text-lg italic leading-relaxed tracking-normal md:text-xl">
-                {invite.crownedCrane.body.map((p) => (
-                  <p key={p}>{p}</p>
-                ))}
-              </div>
+            <GoldRule />
+
+            <div className="mx-auto flex h-28 w-20 items-center justify-center md:h-36 md:w-28">
+              <Image
+                src={invite.crane.src}
+                alt="The Patrick Cavanni crowned crane emblem"
+                width={invite.crane.width}
+                height={invite.crane.height}
+                sizes="112px"
+                className="h-full w-auto"
+              />
+            </div>
+            <p className="section-title mt-3 text-xs uppercase tracking-[0.28em] text-accent-soft">
+              {invite.crownedCrane.subtitle}
+            </p>
+            <h3 className="section-title mt-2 text-xl font-bold md:text-2xl">{invite.crownedCrane.title}</h3>
+            <div className="section-title mx-auto mt-4 max-w-2xl space-y-4 text-lg italic leading-relaxed tracking-normal md:text-xl">
+              {invite.crownedCrane.body.map((p) => (
+                <p key={p}>{p}</p>
+              ))}
             </div>
             <Quote>{invite.crownedCrane.quote}</Quote>
-          </Card>
+          </section>
         </Reveal>
-
-        {invite.gallery.length > 0 && (
-          <Reveal>
-            <Card id="gallery" title={invite.galleryTitle} icon={<PhotosIcon />}>
-              <Gallery photos={invite.gallery} />
-            </Card>
-          </Reveal>
-        )}
 
         <div className="grid gap-12 md:grid-cols-2 md:gap-6 lg:gap-8">
           <Reveal>
@@ -339,44 +301,6 @@ export function Invitation({
             </Card>
           </Reveal>
         </div>
-
-        <Reveal>
-          <Card id="dresscode" title="Dress Code" icon={<ShirtIcon />}>
-            <DetailRow icon={<ShirtIcon size={16} />}>{invite.dressCodeTitle}</DetailRow>
-
-            <div className="mt-6 flex items-center justify-center gap-6 sm:gap-10">
-              {invite.colors.map((c) => (
-                <div key={c.name} className="flex flex-col items-center gap-2">
-                  <span
-                    className="h-12 w-12 rounded-full shadow-md ring-2 ring-accent-soft/70 ring-offset-2 sm:h-14 sm:w-14"
-                    style={{ background: c.hex }}
-                  />
-                  <span className="section-title text-sm italic tracking-normal">{c.name}</span>
-                </div>
-              ))}
-            </div>
-
-            {invite.dressCode.length > 0 && (
-              <div className="mx-auto mt-8 grid max-w-xl grid-cols-2 gap-1 px-1 sm:gap-4">
-                {invite.dressCode.map((d, i) => (
-                  <figure
-                    key={d.label}
-                    className={`bg-white p-1.5 pb-3 shadow-[0_10px_25px_-8px_rgba(0,0,0,0.35)] ring-1 ring-black/5 transition-transform duration-300 hover:rotate-0 hover:scale-[1.03] sm:p-2.5 sm:pb-4 ${
-                      i % 2 === 0 ? "-rotate-3" : "rotate-3"
-                    }`}
-                  >
-                    <div className="relative aspect-[3/4] overflow-hidden bg-accent/10">
-                      <Image src={d.src} alt={d.label} fill sizes="(min-width: 640px) 280px, 48vw" className="object-cover object-top" />
-                    </div>
-                    <figcaption className="section-title mt-2 text-center text-xs italic tracking-normal sm:text-sm">
-                      {d.label}
-                    </figcaption>
-                  </figure>
-                ))}
-              </div>
-            )}
-          </Card>
-        </Reveal>
 
         <Reveal>
           <Card id="rsvp" title="Confirm Your Attendance" icon={<MailCheckIcon />}>

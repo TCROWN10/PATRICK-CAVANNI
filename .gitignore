@@ -45,3 +45,6 @@ next-env.d.ts
 /public/Sia - Unstoppable (Official Audio).mp3
 /public/Rosa_Linn_-_Snap_(mp3.pm).mp3
 /public/invite/snap.mp3
+
+# Misnamed audio source (app uses /invite/instrumental.mp3)
+/public/Instrumental.jpeg

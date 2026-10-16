@@ -33,7 +33,7 @@ export function HeroSlideshow({
           fill
           loading={i === 0 ? "eager" : "lazy"}
           sizes="(min-width: 1024px) 58vw, 100vw"
-          className={`object-cover object-[50%_12%] transition-[opacity,transform] duration-[1.4s] ease-out ${
+          className={`object-cover object-[50%_22%] transition-[opacity,transform] duration-[1.4s] ease-out ${
             i === index ? "opacity-100" : "opacity-0"
           } ${opened ? "scale-100" : "scale-105"}`}
         />

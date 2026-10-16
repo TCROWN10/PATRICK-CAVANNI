@@ -8,16 +8,8 @@ export const invite = {
   ogImage: "/brand/og.jpg",
   heroes: [
     {
-      src: "/Invitation-pic.jpeg",
-      alt: "Model wearing a Patrick Cavanni purple woven cape over a lime green gown",
-    },
-    {
-      src: "/Image-4.jpeg",
-      alt: "Model in a burgundy pleated gown with a teal lattice cape and gold necklace",
-    },
-    {
-      src: "/Image-5.jpeg",
-      alt: "Model in a sculptural emerald green gown with architectural pleats",
+      src: "/Final-image.jpeg",
+      alt: "Model in a burgundy pleated gown with teal woven structures — Tethered Lines",
     },
   ] as Photo[],
 
@@ -47,12 +39,6 @@ export const invite = {
   tetheredLines: {
     title: "Tethered Lines",
     subtitle: "The Architecture of the Mind",
-    image: {
-      src: "/Fashion-design-One.jpeg",
-      width: 736,
-      height: 981,
-      alt: "A room woven with red threads, visitors walking through the installation",
-    },
     body: [
       "Tethered Lines explores the invisible connections that shape us: memory, heritage, relationships, ambitions and dreams.",
       "Through contemporary African craftsmanship, layered forms and intricate textures, it reflects how we inherit, transform and carry what makes us who we are.",
@@ -71,15 +57,7 @@ export const invite = {
   },
 
   galleryTitle: "The Gallery",
-  gallery: [
-    { src: "/Invitation-pic.jpeg", alt: "Model wearing a purple woven cape over a lime green gown" },
-    { src: "/Image-4.jpeg", alt: "Model in a burgundy gown with a teal lattice cape" },
-    { src: "/Image-5.jpeg", alt: "Model in a sculptural emerald green gown" },
-    { src: "/Image-1.png", alt: "A glass cube woven with red thread, letter tiles suspended inside" },
-    { src: "/Image-2.png", alt: "Two cocktail tables dressed in ivory linen with fresh flowers" },
-    { src: "/Image-3.png", alt: "A guest in a tailored stone suit on a red carpet" },
-    { src: "/Fashion-design-One.jpeg", alt: "A room woven with red threads, visitors walking through the installation" },
-  ] as Photo[],
+  gallery: [] as Photo[],
 
   venue: "Stellar Inhouse",
   venueAddress: "16 Kofo Abayomi Street, Victoria Island, Lagos",
@@ -91,11 +69,12 @@ export const invite = {
     { name: "Burgundy", hex: "#7b1e3a" },
   ],
   dressCode: [] as DressCodePhoto[],
+  showDressCode: false,
 
   vision: "We honour where we come from. We create for where we are going.",
   signoff: "African Heritage. Timeless Elegance. Contemporary Excellence.",
 
-  music: "/invite/unstoppable.mp3" as string | null,
+  music: "/invite/instrumental.mp3" as string | null,
 };
 
 export type Invite = typeof invite;
