@@ -1,13 +1,8 @@
 # Patrick Cavanni — Guest invite links
 
-**Base URL:** https://patrick-cavanni.vercel.app
+**Live site:** [https://patrick-cavanni.vercel.app](https://patrick-cavanni.vercel.app)
 
 Each guest has a private link with their name and personal message.
-After deploying to Vercel, if your live URL is different, run:
-
-```bash
-npm run guests -- https://YOUR-VERCEL-URL
-```
 
 Total guests: **82**
 
@@ -98,4 +93,4 @@ Total guests: **82**
 
 ## WhatsApp-ready links
 
-See `data/guest-links.csv` for name, link, and WhatsApp share URL columns.
+See [`data/guest-links.csv`](./data/guest-links.csv) for name, link, and WhatsApp share URL columns.

@@ -11,25 +11,26 @@ npm run dev -- -p 3001
 
 Open [http://localhost:3001](http://localhost:3001). Guest examples: see `GUEST-INVITES.md`.
 
+## Live site
+
+[https://patrick-cavanni.vercel.app](https://patrick-cavanni.vercel.app)
+
 ## Guest links
 
 - Full list: [`GUEST-INVITES.md`](./GUEST-INVITES.md)
 - CSV (name, link, WhatsApp): [`data/guest-links.csv`](./data/guest-links.csv)
 - Source data: [`data/guests.csv`](./data/guests.csv)
 
-After you know your live Vercel URL:
+To regenerate links after a URL change:
 
 ```bash
-npm run guests -- https://your-deployment.vercel.app
+npm run guests -- https://patrick-cavanni.vercel.app
 ```
 
 ## Environment (optional)
 
-Copy `.env.example` to `.env.local`:
+In Vercel → Project → Settings → Environment Variables, set:
 
-- `NEXT_PUBLIC_SITE_URL` — live site URL (link previews / Wallet)
-- Google Wallet vars — only if enabling “Add to Google Wallet”
+- `NEXT_PUBLIC_SITE_URL` = `https://patrick-cavanni.vercel.app`
 
-## Deploy
-
-Connect this repo to [Vercel](https://vercel.com). Set `NEXT_PUBLIC_SITE_URL` to the production domain, then regenerate guest links with that URL.
+Google Wallet vars are optional (only if enabling “Add to Google Wallet”).
