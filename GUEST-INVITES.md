@@ -4,7 +4,7 @@
 
 Each guest has a private link with their name and personal message.
 
-Total guests: **82**
+Total guests: **83**
 
 | # | Guest | Invite link |
 |---|-------|-------------|
@@ -90,6 +90,7 @@ Total guests: **82**
 | 80 | Mrs Abisoye Coker-Odusote | https://patrick-cavanni.vercel.app/i/kiq5lw |
 | 81 | Mrs Lawal Oyinkan | https://patrick-cavanni.vercel.app/i/ihh1il |
 | 82 | Mrs Adaobi Nwakuche | https://patrick-cavanni.vercel.app/i/glwtou |
+| 83 | Dr. Nkoli Imoh | https://patrick-cavanni.vercel.app/i/uegulz |
 
 ## WhatsApp-ready links
 
