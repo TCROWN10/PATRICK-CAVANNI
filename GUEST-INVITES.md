@@ -4,7 +4,7 @@
 
 Each guest has a private link with their name and personal message.
 
-Total guests: **83**
+Total guests: **115**
 
 | # | Guest | Invite link |
 |---|-------|-------------|
@@ -91,6 +91,38 @@ Total guests: **83**
 | 81 | Mrs Lawal Oyinkan | https://patrick-cavanni.vercel.app/i/ihh1il |
 | 82 | Mrs Adaobi Nwakuche | https://patrick-cavanni.vercel.app/i/glwtou |
 | 83 | Dr. Nkoli Imoh | https://patrick-cavanni.vercel.app/i/uegulz |
+| 84 | Mrs Nkoli Igbeka | https://patrick-cavanni.vercel.app/i/ixtzar |
+| 85 | Mrs Adaeze Siekpe | https://patrick-cavanni.vercel.app/i/138ym3 |
+| 86 | Mrs Rosario Osobase | https://patrick-cavanni.vercel.app/i/v1qcbx |
+| 87 | Mrs Oliyide Williams | https://patrick-cavanni.vercel.app/i/him4am |
+| 88 | Mrs Ogbebor Oghomwan | https://patrick-cavanni.vercel.app/i/ytwsai |
+| 89 | Kalu David | https://patrick-cavanni.vercel.app/i/1fvmks |
+| 90 | Adedeji Lawal | https://patrick-cavanni.vercel.app/i/zvcawv |
+| 91 | Saviour Peter | https://patrick-cavanni.vercel.app/i/ruobg3 |
+| 92 | Fredrick More | https://patrick-cavanni.vercel.app/i/0u8huf |
+| 93 | Mrs Stella Trusties | https://patrick-cavanni.vercel.app/i/g2s0tr |
+| 94 | Mrs Sophia Ajede | https://patrick-cavanni.vercel.app/i/cayzjp |
+| 95 | Mrs Kike Ayeni | https://patrick-cavanni.vercel.app/i/uttzvz |
+| 96 | Mrs Origbe Ogechi | https://patrick-cavanni.vercel.app/i/0bqeo0 |
+| 97 | Dr Uzor Iloabachie | https://patrick-cavanni.vercel.app/i/jumaep |
+| 98 | Mrs Makiyo Uzoramaka | https://patrick-cavanni.vercel.app/i/ijnxwv |
+| 99 | Mrs Chika Acholonu | https://patrick-cavanni.vercel.app/i/trdbhp |
+| 100 | Mrs Tosh Adefeko | https://patrick-cavanni.vercel.app/i/x4yzsp |
+| 101 | Mrs Olayidi Williams | https://patrick-cavanni.vercel.app/i/8eyb61 |
+| 102 | Mrs Nikky Ogbuefi | https://patrick-cavanni.vercel.app/i/dobsse |
+| 103 | Mrs Gina Ikpea-Uwangue | https://patrick-cavanni.vercel.app/i/rdxums |
+| 104 | Mrs Modupe Adeniji | https://patrick-cavanni.vercel.app/i/rcbcje |
+| 105 | Mrs Abimbola Williams | https://patrick-cavanni.vercel.app/i/1tsgtj |
+| 106 | Mrs Neya Kalu | https://patrick-cavanni.vercel.app/i/e9wrya |
+| 107 | Mrs Tonya Osato Lawani | https://patrick-cavanni.vercel.app/i/ypuc5n |
+| 108 | Mrs Fusho Olusanya | https://patrick-cavanni.vercel.app/i/6kkll1 |
+| 109 | Mrs Cynthia Okereke | https://patrick-cavanni.vercel.app/i/jt20ex |
+| 110 | Mrs Doyin Onitilo | https://patrick-cavanni.vercel.app/i/bhqbzw |
+| 111 | Mrs Oyinlola Sonoiki | https://patrick-cavanni.vercel.app/i/oq2y3e |
+| 112 | Mrs Omon Odike | https://patrick-cavanni.vercel.app/i/9thkqk |
+| 113 | Mrs Biodun Igwe | https://patrick-cavanni.vercel.app/i/uaswws |
+| 114 | Ms Precious Dickson | https://patrick-cavanni.vercel.app/i/ij7tar |
+| 115 | Mrs Loveth | https://patrick-cavanni.vercel.app/i/fezvu5 |
 
 ## WhatsApp-ready links
 
