@@ -4,7 +4,7 @@
 
 Each guest has a private link with their name and personal message.
 
-Total guests: **115**
+Total guests: **129**
 
 | # | Guest | Invite link |
 |---|-------|-------------|
@@ -123,6 +123,20 @@ Total guests: **115**
 | 113 | Mrs Biodun Igwe | https://patrick-cavanni.vercel.app/i/uaswws |
 | 114 | Ms Precious Dickson | https://patrick-cavanni.vercel.app/i/ij7tar |
 | 115 | Mrs Loveth | https://patrick-cavanni.vercel.app/i/fezvu5 |
+| 116 | Ms Ezinne Chinkata | https://patrick-cavanni.vercel.app/i/cp4vyg |
+| 117 | Ms Clarissa Morgan | https://patrick-cavanni.vercel.app/i/bhomc4 |
+| 118 | Mrs Oludayo Adeyinka | https://patrick-cavanni.vercel.app/i/rk3xd2 |
+| 119 | Mrs Chinyelu Onyekwelu | https://patrick-cavanni.vercel.app/i/mf83mt |
+| 120 | Mrs Chinenye Oguine | https://patrick-cavanni.vercel.app/i/fg1v2g |
+| 121 | Ms Doreen Offor | https://patrick-cavanni.vercel.app/i/lhytal |
+| 122 | Ms Doris Offor | https://patrick-cavanni.vercel.app/i/eiezhn |
+| 123 | Hon. Mrs Omo'ba Adeola Adetoro | https://patrick-cavanni.vercel.app/i/yc8sko |
+| 124 | Hon. Mrs Aminat Alabi | https://patrick-cavanni.vercel.app/i/mwwgey |
+| 125 | Mrs Olufunke Okoro | https://patrick-cavanni.vercel.app/i/colh7n |
+| 126 | Ms Ojini Amida | https://patrick-cavanni.vercel.app/i/qq9zll |
+| 127 | Mrs Adeola Ojuolape Adelekun | https://patrick-cavanni.vercel.app/i/x4nxyq |
+| 128 | Mrs Esosa Ogbetuo | https://patrick-cavanni.vercel.app/i/akztvf |
+| 129 | Mrs Geraldine | https://patrick-cavanni.vercel.app/i/xadijn |
 
 ## WhatsApp-ready links
 
