@@ -4,7 +4,7 @@
 
 Each guest has a private link with their name and personal message.
 
-Total guests: **129**
+Total guests: **135**
 
 | # | Guest | Invite link |
 |---|-------|-------------|
@@ -78,7 +78,7 @@ Total guests: **129**
 | 68 | Yetunde Helen | https://patrick-cavanni.vercel.app/i/hbhijm |
 | 69 | Nimi Nwofor | https://patrick-cavanni.vercel.app/i/zwwupp |
 | 70 | Gbemi Shasore | https://patrick-cavanni.vercel.app/i/xfabth |
-| 71 | Cherry Eromosele | https://patrick-cavanni.vercel.app/i/myct7o |
+| 71 | Dr Eromoselle Cher | https://patrick-cavanni.vercel.app/i/myct7o |
 | 72 | Golden Ugba | https://patrick-cavanni.vercel.app/i/kxxikw |
 | 73 | Natasha Akpoti-Uduaghan — Senator representing Kogi Central | https://patrick-cavanni.vercel.app/i/y1o4ws |
 | 74 | Queen Okon | https://patrick-cavanni.vercel.app/i/zyf9nk |
@@ -137,7 +137,9 @@ Total guests: **129**
 | 127 | Mrs Adeola Ojuolape Adelekun | https://patrick-cavanni.vercel.app/i/x4nxyq |
 | 128 | Mrs Esosa Ogbetuo | https://patrick-cavanni.vercel.app/i/akztvf |
 | 129 | Mrs Geraldine | https://patrick-cavanni.vercel.app/i/xadijn |
-
-## WhatsApp-ready links
-
-See [`data/guest-links.csv`](./data/guest-links.csv) for name, link, and WhatsApp share URL columns.
+| 130 | Mrs Alero | https://patrick-cavanni.vercel.app/i/aupq0u |
+| 131 | Mrs Prisca Utoka | https://patrick-cavanni.vercel.app/i/gxkvgq |
+| 132 | Maurice Ballantyne | https://patrick-cavanni.vercel.app/i/nifk8c |
+| 133 | Funke Babs Kufeji | https://patrick-cavanni.vercel.app/i/ztt94h |
+| 134 | Mrs Vivinne Gowon | https://patrick-cavanni.vercel.app/i/gkz3so |
+| 135 | Mrs Nneka Eke | https://patrick-cavanni.vercel.app/i/nom0ak |
