@@ -4,7 +4,7 @@
 
 Each guest has a private link with their name and personal message.
 
-Total guests: **135**
+Total guests: **145**
 
 | # | Guest | Invite link |
 |---|-------|-------------|
@@ -143,3 +143,13 @@ Total guests: **135**
 | 133 | Funke Babs Kufeji | https://patrick-cavanni.vercel.app/i/ztt94h |
 | 134 | Mrs Vivinne Gowon | https://patrick-cavanni.vercel.app/i/gkz3so |
 | 135 | Mrs Nneka Eke | https://patrick-cavanni.vercel.app/i/nom0ak |
+| 136 | Babatunde Osho | https://patrick-cavanni.vercel.app/i/teoldc |
+| 137 | Mrs Udo Onigbo | https://patrick-cavanni.vercel.app/i/gtyhnh |
+| 138 | Mrs Chetachi Okechukwu | https://patrick-cavanni.vercel.app/i/eip3ic |
+| 139 | Mrs Heather Onoh | https://patrick-cavanni.vercel.app/i/zqpi8j |
+| 140 | Mrs Doyin Niobi | https://patrick-cavanni.vercel.app/i/ucp98z |
+| 141 | Ms Cynthia Lewis | https://patrick-cavanni.vercel.app/i/qh4ybg |
+| 142 | Mrs Lola Ogunnaike | https://patrick-cavanni.vercel.app/i/juvi0q |
+| 143 | Mrs Powede Lawrence | https://patrick-cavanni.vercel.app/i/m1xg67 |
+| 144 | Ms Folake Olaosebikan | https://patrick-cavanni.vercel.app/i/pl7m7z |
+| 145 | Del Alakija | https://patrick-cavanni.vercel.app/i/b45x00 |
